@@ -1,0 +1,42 @@
+.d-header {
+    background: #006A9C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+
+    .d-header-left-side {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+
+        .d-header-logo {
+            background-image: url('./../../assets/imgs/dumpster_icon_logo3_white.svg');
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 15px;
+            padding: 20px;
+            background-size: cover;
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
+    
+    .d-header-right-side {
+        padding: 10px 20px;
+    }
+
+    .d-header-menu-icon {
+        color: #FFF;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .d-header-logo {
+        width: 180px !important;
+        height: 0px !important;
+        margin-left: 40px !important;
+        background-size: contain !important;
+    }
+}

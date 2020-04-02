@@ -1,0 +1,26 @@
+@import './../../assets/styles/common.scss';
+
+.d-playlist-header-songs-label {
+    color: $light-blue;
+    font-size: 0.8em;
+}
+
+.d-playlist-header {
+    padding: 15px;
+    background: $dark-blue;
+}
+
+.d-playlist-header-name-container {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em !important;
+}
+
+.d-playlist-header-icon {
+    font-size: 1.3em;
+    margin-right: 10px;
+}
+
+.d-playlist-header-name {
+    
+}

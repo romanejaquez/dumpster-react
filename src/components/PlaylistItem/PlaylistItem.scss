@@ -1,0 +1,29 @@
+@import './../../assets/styles/common.scss';
+
+.d-playlist-item {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(79, 79, 79, 0.2);
+}
+
+.d-playlist-item-name-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.d-playlist-item-name {
+    margin-left: 10px;
+}
+
+.d-playlist-item-icon {
+    font-size: 0.9em;
+}
+
+.d-playlist-item-time {
+    color: $light-blue;
+    font-size: 0.8em;
+    margin-left: 25px;
+}

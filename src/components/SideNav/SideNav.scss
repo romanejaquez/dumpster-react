@@ -1,0 +1,11 @@
+.d-side-nav {
+    background: #212121;
+    width: 250px;
+    display: block;
+}
+
+@media screen and (max-width: 500px) {
+    .d-side-nav {
+        display: none !important;
+    }
+}
