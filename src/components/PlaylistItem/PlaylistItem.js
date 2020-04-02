@@ -3,7 +3,7 @@ import './PlaylistItem.scss';
 import {useSelector, useDispatch} from 'react-redux';
 import playlistItemActions from './../../actions/playlistItemActions';
 
-const PlaylistItem = () => {
+const PlaylistItem = ({ song }) => {
 
     const dispatch = useDispatch();
 
@@ -12,7 +12,7 @@ const PlaylistItem = () => {
             <div className="d-playlist-item-left">
                 <div className="d-playlist-item-name-wrapper">
                     <span className="d-playlist-item-icon material-icons">audiotrack</span>
-                    <span className="d-playlist-item-name">Name of Song Here</span>
+                    <span className="d-playlist-item-name">{song.Name}</span>
                 </div>
                 <div className="d-playlist-item-time">00:00</div>
             </div>

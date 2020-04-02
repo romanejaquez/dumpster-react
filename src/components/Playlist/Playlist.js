@@ -2,37 +2,10 @@ import React from 'react';
 import './Playlist.scss';
 import PlaylistItem from '../PlaylistItem/PlaylistItem';
 
-const Playlist = () => {
-
+const Playlist = ({ playlist }) => {
     return (
         <div className="d-playlist">
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
-            <PlaylistItem />
+            {playlist.Songs ? playlist.Songs.map((s) => <PlaylistItem key={s.Id} song={s}/> ) : null}
         </div>
     );
 }

@@ -4,10 +4,15 @@ import PlaylistHeader from '../PlaylistHeader/PlaylistHeader';
 import PlaylistSearch from '../PlaylistSearch/PlaylistSearch';
 import Playlist from '../Playlist/Playlist';
 import Player from '../Player/Player';
-import {useDispatch} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import playlistActions from './../../actions/playlistActions';
 
 const PlaylistContainer = () => {
+
+    const playlist = useSelector(state => {
+        return state.playlist.allPlaylists.length > 0 ? 
+            state.playlist.allPlaylists[0] : {}
+    });
 
     const dispatch = useDispatch();
 
@@ -21,15 +26,15 @@ const PlaylistContainer = () => {
 
     useEffect(() => {
         fetchData();
-    });
+    },[]);
 
     return (
         <>
         <div className="d-playlist-header-wrapper">
-            <PlaylistHeader />
+            <PlaylistHeader playlist={playlist} />
             {/* <PlaylistSearch /> */}
         </div>
-        <Playlist />
+        <Playlist playlist={playlist}/>
         <Player />
         </>
     );
