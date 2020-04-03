@@ -12,7 +12,7 @@ const PlaylistItem = ({ song }) => {
             <div className="d-playlist-item-left">
                 <div className="d-playlist-item-name-wrapper">
                     <span className="d-playlist-item-icon material-icons">audiotrack</span>
-                    <span className="d-playlist-item-name">{song.Name}</span>
+                    <span className="d-playlist-item-name" dangerouslySetInnerHTML={{__html: song.Name}}></span>
                 </div>
                 <div className="d-playlist-item-time">00:00</div>
             </div>

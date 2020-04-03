@@ -10,8 +10,14 @@ import playlistActions from './../../actions/playlistActions';
 const PlaylistContainer = () => {
 
     const playlist = useSelector(state => {
+
+        if (!state.playlist.selectedPlaylist) {
         return state.playlist.allPlaylists.length > 0 ? 
-            state.playlist.allPlaylists[0] : {}
+            state.playlist.allPlaylists[0] : {};
+        }
+        else {
+            return state.playlist.allPlaylists.find(p => p.Id === state.playlist.selectedPlaylist)
+        }
     });
 
     const dispatch = useDispatch();

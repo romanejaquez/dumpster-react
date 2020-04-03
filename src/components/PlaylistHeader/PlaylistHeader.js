@@ -8,7 +8,7 @@ const PlaylistHeader = ({ playlist }) => {
         <div className="d-playlist-header">
             <div className="d-playlist-header-name-container">
                 <span className="d-playlist-header-icon material-icons">queue_music</span>
-                <span className="d-playlist-header-name">{playlist.FolderName}</span>
+                <span className="d-playlist-header-name" dangerouslySetInnerHTML={{__html: playlist.FolderName}}></span>
             </div>
             <div className="d-playlist-header-songs-label">
                 <span>{numOfSongs} songs</span>

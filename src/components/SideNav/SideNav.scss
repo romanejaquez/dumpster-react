@@ -1,7 +1,48 @@
 .d-side-nav {
     background: #212121;
     width: 250px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+
+    .d-side-nav-playlists {
+        overflow-y: auto;
+        flex: 1;
+    }
+
+    .d-side-nav-playlists::-webkit-scrollbar-track {
+        background: #212121;
+    }
+    .d-side-nav-playlists::-webkit-scrollbar-thumb {
+        background-color: #494949 ;
+        border-radius: 6px;
+        border: 3px solid #212121;
+    }
+
+    .d-side-nav-header {
+        color: #FFF;
+        padding: 20px;
+        font-size: 20px;
+        display: flex;
+        border-bottom: 1px solid #494949;
+    }
+
+    .current-playlist {
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+.d-side-nav-playlists::-webkit-scrollbar {
+    width: 1em;
+}
+
+.d-side-nav-playlists::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.d-side-nav-playlists::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
 }
 
 @media screen and (max-width: 500px) {

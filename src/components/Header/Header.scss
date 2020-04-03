@@ -19,7 +19,7 @@
             padding: 20px;
             background-size: cover;
             display: inline-block;
-            margin-left: 20px;
+            margin-left: 0px;
         }
     }
     
@@ -30,13 +30,22 @@
     .d-header-menu-icon {
         color: #FFF;
     }
+
+    .d-header-waffle {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .d-header-logo {
         width: 180px !important;
         height: 0px !important;
-        margin-left: 40px !important;
+        margin-left: 20px !important;
         background-size: contain !important;
+    }
+
+    .d-header-waffle {
+        display: block !important;
+        cursor: pointer;
     }
 }

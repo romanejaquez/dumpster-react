@@ -4,8 +4,9 @@ import './App.css';
 //components
 import Header from './../../components/Header/Header';
 import SideNav from './../../components/SideNav/SideNav';
+import Drawer from './../../components/Drawer/Drawer';
 
-//container
+//containers
 import MainContainer from './../../containers/MainContainer/MainContainer';
 import MainContent from './../../containers/MainContent/MainContent';
 import PlaylistContainer from '../../components/PlaylistContainer/PlaylistContainer';
@@ -20,6 +21,7 @@ function App() {
           <PlaylistContainer />
         </MainContent>
       </MainContainer>
+      <Drawer />
       {/* <Footer /> */}
     </>
   );

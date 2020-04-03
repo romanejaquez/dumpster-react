@@ -1,6 +1,6 @@
 const initialState = {
     currentSongPlaying: null,
-    currentPlaylist: [],
+    selectedPlaylist: '',
     myPlaylists: [],
     allPlaylists: []
 }
@@ -12,6 +12,11 @@ const playlistReducer = (state = initialState, action) => {
             return {
                 ...state,
                 allPlaylists: action.payload
+            }
+        case "SELECTED_PLAYLIST":
+            return {
+                ...state,
+                selectedPlaylist: action.payload
             }
         case "SELECT_SONG": 
             return {
