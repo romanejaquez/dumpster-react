@@ -1,6 +1,7 @@
 const initialState = {
     currentSongPlaying: null,
     selectedPlaylist: '',
+    isLoading: false,
     myPlaylists: [],
     allPlaylists: []
 }

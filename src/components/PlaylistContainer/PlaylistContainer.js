@@ -6,6 +6,7 @@ import Playlist from '../Playlist/Playlist';
 import Player from '../Player/Player';
 import {useSelector, useDispatch} from 'react-redux';
 import playlistActions from './../../actions/playlistActions';
+import loadingActions from './../../actions/loadingActions';
 
 const PlaylistContainer = () => {
 
@@ -23,11 +24,19 @@ const PlaylistContainer = () => {
     const dispatch = useDispatch();
 
     async function fetchData() {
+        
+        dispatch(loadingActions.showLoading(true));
         const res = await fetch("http://streaming.drcoderz.com/files.php");
         res
             .json()
-            .then(res => dispatch(playlistActions.addPlaylists(res)))
-            .catch(err => dispatch(playlistActions.addPlaylistError(err)));
+            .then(res => {
+                dispatch(playlistActions.addPlaylists(res));
+                dispatch(loadingActions.showLoading(false));
+            })
+            .catch(err => {
+                dispatch(playlistActions.addPlaylistError(err));
+                dispatch(loadingActions.showLoading(false));
+            });
     }
 
     useEffect(() => {
