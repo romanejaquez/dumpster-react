@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import './PlaylistContainer.scss';
 import PlaylistHeader from '../PlaylistHeader/PlaylistHeader';
-import PlaylistSearch from '../PlaylistSearch/PlaylistSearch';
 import Playlist from '../Playlist/Playlist';
 import Player from '../Player/Player';
 import {useSelector, useDispatch} from 'react-redux';

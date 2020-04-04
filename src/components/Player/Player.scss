@@ -14,42 +14,22 @@
     margin-right: 20px;
 }
 
+.d-player-current-song-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .d-player-current-song {
     margin-bottom: 10px;
     white-space: nowrap;
-    display: flex;
     align-items: center;
+    text-overflow: ellipsis;
     overflow: hidden;
 }
 
 .d-player-song-wrapper {
     margin-bottom: 20px;
     width: 320px;
-}
-
-.d-player-control {
-    padding: 10px;
-    margin: 0px 10px;
-    background: #272727;
-    border-radius: 50%;
-}
-
-.d-player-control-lg {
-    font-size: 4em;
-}
-
-.d-player-control-md {
-    font-size: 3em !important;
-}
-
-.d-player-control-sm {
-    font-size: 2em !important;
-}
-
-.d-player-controls {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
 }
 
 /* styles for the range */
